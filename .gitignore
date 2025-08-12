@@ -1,3 +1,11 @@
 run
 *.o
 add_vec.*
+/build/
+
+/log/*
+!/log/placeholder
+
+.*/
+!/.github/
+target
