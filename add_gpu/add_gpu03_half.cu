@@ -55,7 +55,7 @@ void vector_add(T* c, const T* a, const T* b, size_t n, const dim3& grid, const 
 // 主程序示范
 int main()
 {
-    const size_t SIZE = 1 << 30; // 元素总数 half个数
+    const size_t SIZE = 1 << 24; // 元素总数 half个数
     size_t size_bytes_half = SIZE * sizeof(__half);
 
     std::vector<__half> h_a(SIZE);
