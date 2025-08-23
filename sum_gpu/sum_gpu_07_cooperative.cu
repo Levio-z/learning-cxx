@@ -154,8 +154,11 @@ int main() {
     ));
     
     // 计算最佳网格大小
+    // prop.multiProcessorCount 是 GPU 上的流式多处理器 (SM) 数量
+    // max_blocks_per_sm 是每个 SM 可以同时容纳的最大线程块数量
     int grid_size = max_blocks_per_sm * prop.multiProcessorCount;
     // 确保网格大小不会超过实际需要的数量
+
     grid_size = std::min(grid_size, static_cast<int>((n + block_size - 1) / block_size));
     grid_size = std::max(grid_size, 1);
     
