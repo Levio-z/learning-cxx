@@ -17,3 +17,9 @@ target("summary")
     set_kind("binary")
     add_deps("test")
     add_files("learn/summary.cpp")
+
+-- 新增draft模块
+target("draft")
+    set_kind("binary")
+    add_deps("test")
+    add_files("learn/draft.cpp")

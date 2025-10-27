@@ -13,6 +13,7 @@ struct Log {
     std::vector<bool> result;
     std::mutex mutex;
     Log &operator<<(unsigned int n);
+    Log &operator>>(unsigned int n);  // 新增：用于处理draft
 };
 
 #endif// __TEST_H__
